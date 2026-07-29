@@ -31,4 +31,4 @@ ENV PORT=8000
 
 # Default command: adjust the WSGI/ASGI entrypoint as needed for your project
 # For example, change `app:app` to `myproject.main:app` or run a different server if needed.
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", PORT]
+CMD ["sh", "-lc", "exec uvicorn main:app --host 0.0.0.0 --port ${PORT}"]

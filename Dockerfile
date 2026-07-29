@@ -31,4 +31,4 @@ ENV PORT=8000
 
 # Default command: adjust the WSGI/ASGI entrypoint as needed for your project
 # For example, change `app:app` to `myproject.main:app` or run a different server if needed.
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8000", "--workers", "4"]
+CMD ["uvicorn", "app:app", "--bind", "0.0.0.0", "--port", PORT]
